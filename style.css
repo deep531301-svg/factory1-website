@@ -1,0 +1,712 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: orange;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 90vh;
+    background-image: url("images/ps.jpeg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: orange;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: orange;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 20px;
+}
+
+/* ================= SERVICES ================= */
+.services {
+    padding: 80px 60px;
+    background: #1a1a1a;
+}
+
+.services h2 {
+    text-align: center;
+    color: orange;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: #2a2a2a;
+}
+
+.service-card h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    padding: 80px 60px;
+}
+
+.gallery-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 36px;
+    color: #f4a100;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#popupContent {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+#popupContent img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    padding: 80px 60px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.contact h2 {
+    color: orange;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background: orange;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#msg {
+    margin-top: 10px;
+    color: #00ff99;
+    font-weight: bold;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid orange;
+}
+
+.company-name {
+    color: orange;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease;  /* fix here */
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+/* ================= OUR PROCESS SECTION ================= */
+.process {
+    padding: 80px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-title {
+    
+    text-align: center;
+    margin: 40px 0;
+    font-size: 36px;
+    color: #f4a100;
+}
+
+/* Cards/Grid */
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.process-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,140,0,0.3);
+}
+
+.process-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.process-card h3 {
+    font-size: 20px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    font-size: 16px;
+    color: #ddd;
+}
+/* Default process card styles */
+.process-card {
+    background: #111; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.process-card h3.card-heading {
+    color: orange; /* heading default color */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.process-card p.card-text {
+    color: white; 
+    font-size: 1rem;
+}
+
+/* Styles when the card is "opened" */
+
+.process-card {
+    background: #111;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.process-card h3.card-heading {
+    color: orange; /* heading always orange */
+}
+
+.process-card p.card-text {
+    color: #ccc; /* default paragraph color */
+    transition: color 0.3s ease;
+}
+
+/* When card is open */
+.process-card.open {
+    background: #333; /* background changes */
+}
+
+.process-card.open p.card-text {
+    color: white; /* paragraph turns white when open */
+}
+.card-heading{
+    color: orange;
+}
+
+
+/* Arrows between steps */
+.process-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    font-weight: bold;
+}
+
+.process-flow span {
+    background: #1c1c1c;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 2px solid orange;
+    color: white;
+    font-size: 16px;
+}
+
+.arrow {
+    font-size: 24px;
+    color: orange;
+}
+
+/* Exit button inside Process section */
+.exit-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px 30px;
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+
+    transition: box-shadow 0.2s; /* ✅ FIXED */
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .process {
+        padding: 40px 5%;
+    }
+
+    .process-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .process-card h3 {
+        font-size: 18px;
+    }
+
+    .process-card p {
+        font-size: 15px;
+    }
+
+    .process-flow span {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    .exit-btn {
+        padding: 12px 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .process-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .process-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+    .process-title {
+        font-size: 28px;
+    }
+
+    .process-card h3 {
+        font-size: 18px;
+    }
+
+    .process-card p {
+        font-size: 14px;
+    }
+
+    .process-flow span {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .arrow {
+        font-size: 18px;
+    }
+
+    .exit-btn {
+        padding: 10px 18px;
+    }
+}
+/* ================= EXIT BUTTON ================= */
+.exit-btn {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80%;
+    max-width: 300px;
+
+    padding: 12px;
+    background: linear-gradient(45deg, #ff4d4d, #ff0000);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    z-index: 1000;
+}
+.exit-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.exit-btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+.exit-btn {
+    box-shadow: 0 10px 25px rgba(255,0,0,0.4);
+}
+/* ================= WHY CHOOSE US ================= */
+.why {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: auto;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.why-title {
+    font-size: 36px;
+    color: orange;
+    margin-bottom: 50px;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    
+}
+
+.why-card {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    border-bottom: 4px solid orange;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255,140,0,0.3);
+}
+
+.why-card h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about, .services, .gallery, .contact {
+        padding: 40px 20px;
+    }
+
+    .process {
+        padding: 40px 5%;
+    }
+
+    .process-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .process-card h3 {
+        font-size: 18px;
+    }
+
+    .process-card p {
+        font-size: 15px;
+    }
+
+    .process-flow span {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    .exit-btn {
+        width: 90%;
+        padding: 14px 0;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .process-title {
+        font-size: 28px;
+    }
+
+    .process-card h3 {
+        font-size: 16px;
+    }
+
+    .process-card p {
+        font-size: 14px;
+    }
+
+    .process-flow span {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .arrow {
+        font-size: 18px;
+    }
+}
+    /* ===========menu=========== */
+@media (max-width: 768px) {
+    #nav-menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        /* hidden state */
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+
+        transition: all 0.3s ease;
+    }
+
+    #nav-menu.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}

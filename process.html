@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Our Process</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<!-- Exit Button -->
+<button class="exit-btn" onclick="exitPage()">Exit</button>
+
+<!-- Process Section Title -->
+<h2 class="process-title">Our Process</h2>
+
+<!-- Process Flow -->
+<div class="process-flow">
+    <span>Heating</span><span class="arrow">→</span>
+    <span>Quenching</span><span class="arrow">→</span>
+    <span>Hardness Test</span><span class="arrow">→</span>
+    <span>Cleaning</span><span class="arrow">→</span>
+    <span>Oil Coating</span>
+</div> 
+
+<!-- Process Cards -->
+<div class="process-container">
+    <div class="process-card" onclick="openProcess(this)">
+        <img src="images/33.png" alt="Rotary Furnace Heating">
+        <h3 class="card-heading">Rotary Furnace Heating</h3>
+        <p class="card-text">Metal components are heated in a rotary furnace to achieve the required temperature for heat treatment.</p>
+    </div>
+
+    <div class="process-card" onclick="openProcess(this)">
+        <img src="images/55.png" alt="Water Quenching">
+        <h3 class="card-heading">Water Quenching</h3>
+        <p class="card-text">After heating, the material is quenched in water to increase hardness and improve strength.</p>
+    </div>
+
+    <div class="process-card" onclick="openProcess(this)">
+        <img src="images/3.png" alt="Rockwell Hardness Testing">
+        <h3 class="card-heading">Rockwell Hardness Testing</h3>
+        <p class="card-text">Material hardness is checked using a Rockwell hardness testing machine to ensure proper results.</p>
+    </div>
+
+    <div class="process-card" onclick="openProcess(this)">
+        <img src="images/1.png" alt="Surface Cleaning">
+        <h3 class="card-heading">Surface Cleaning</h3>
+        <p class="card-text">The material is cleaned to remove scale and surface impurities after heat treatment.</p>
+    </div>
+
+    <div class="process-card" onclick="openProcess(this)">
+        <img src="images/555.png" alt="Protective Oil Coating">
+        <h3 class="card-heading">Protective Oil Coating</h3>
+        <p class="card-text">Protective oil is applied to prevent rust and maintain surface quality.</p>
+    </div>
+</div>
+
+<!-- Popup -->
+<div id="processPopup" class="popup" onclick="closeProcess()">
+    <div id="popupContent"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

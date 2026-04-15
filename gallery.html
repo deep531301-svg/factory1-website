@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Work Gallery</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="images/favicon.png"> 
+<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <button class="exit-btn" onclick="exitPage()">Exit</button>
+
+<h1 class="gallery-title">Our Work</h1>
+
+<div class="gallery-container" >
+<img src="images/1.png"onclick="openImage(this)">
+<img src="images/2.png" onclick="openImage(this)">
+<img src="images/11.png" onclick="openImage(this)" >
+<img style="object-position: center;" src="images/22.png" onclick="openImage(this)">
+<img style="object-position: center;"src="images/4.png" onclick="openImage(this)">
+<img src="images/1.png" onclick="openImage(this)">
+<img src="images/1.png" onclick="openImage(this)">
+<img src="images/1.png" onclick="openImage(this)">
+<img src="images/1.png" onclick="openImage(this)">
+
+
+</div>
+<div id="imagePopup" class="popup" onclick="closeImage()">
+    <span class="close-btn">&times;</span>
+<img id="popupImg">
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
